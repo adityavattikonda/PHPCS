@@ -52,12 +52,11 @@ This guide will walk you through the steps to install PHP_CodeSniffer using Comp
         with Zend OPcache v8.3.9, Copyright (c), by Zend Technologies
     ```
 
+## Step-by-Step Guide PHP_CodeSniffer Installation
 ## Prerequisites
 
 - Composer installed on your system
 - A Drupal project set up
-
-## Step-by-Step Guide PHP_CodeSniffer Installation
 
 ### Step 1: Install PHP_CodeSniffer via Composer
 
