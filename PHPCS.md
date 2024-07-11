@@ -159,3 +159,9 @@ DB_IMAGE="docksal/mysql:8.0-2.0"
 
   <config name="testVersion" value="8.3"/>
 ```
+
+### Deployment steps/testing your code
+```
+Switch the test environment on Acquia to PHP 8.3 and test out your PR branch there. 
+Turn on dblog and create a bunch of content. Check the dblog for errors.
+```
