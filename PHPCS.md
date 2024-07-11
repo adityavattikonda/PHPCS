@@ -2,56 +2,6 @@
 
 This guide will walk you through the steps to install PHP_CodeSniffer using Composer and run it in a Drupal project to check custom modules and upgrading PHP versions
 
-## Prerequisites
-
-- Composer installed on your system
-- A Drupal project set up
-
-## Step-by-Step Guide
-
-### Step 1: Install PHP_CodeSniffer via Composer
-
-- Navigate to the root directory of your Drupal project and run the following command to install PHP_CodeSniffer:
-  ```bash
-  composer require --dev "squizlabs/php_codesniffer=*"
-
-### Step 2: Adding Drupal Coding Standards
-
-- To use Drupal's coding standards with PHP_CodeSniffer, we need to add the Coder module:
-  ```bash
-  composer require --dev drupal/coder
-
-- Next, register the Drupal coding standards with PHP_CodeSniffer:
-  ```bash
-  vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
-
-- Verify that the Drupal coding standards are installed:
-  ```bash
-  vendor/bin/phpcs -i
-
-### Step 3: Running PHP_CodeSniffer
-
-- To run PHP_CodeSniffer on your custom modules, use the following command:
-  ```bash
-  vendor/bin/phpcs --standard=Drupal docroot/modules/custom/
-
-- Handling Memory Limit Issues:
-  Edit the php.ini file to increase the memory_limit (or) Using the -d memory_limit=4096M option
-  ```bash
-  vendor/bin/phpcs -d memory_limit=4096M --standard=Drupal docroot/modules/custom/
-
-
-### Step 4: Fixing Code Sniffer Violations
-- PHP_CodeSniffer can automatically fix certain coding standard violations. To do this, run:
-  ```bash
-  vendor/bin/phpcbf -d memory_limit=4096M --standard=Drupal docroot/modules/custom/
-
-### Additional Resources
-
-- [PHP_CodeSniffer Documentation](https://github.com/squizlabs/PHP_CodeSniffer)
-- [Drupal Coding Standards](https://www.drupal.org/docs/develop/standards)
-- [Composer Documentation](https://getcomposer.org/doc/)
-
 ## Upgrading PHP 8.2 to PHP 8.3 on macOS Using Homebrew
 
 ### Steps to Upgrade
@@ -101,6 +51,58 @@ This guide will walk you through the steps to install PHP_CodeSniffer using Comp
     Zend Engine v4.3.9, Copyright (c) Zend Technologies
         with Zend OPcache v8.3.9, Copyright (c), by Zend Technologies
     ```
+
+## Prerequisites
+
+- Composer installed on your system
+- A Drupal project set up
+
+## Step-by-Step Guide PHP_CodeSniffer Installation
+
+### Step 1: Install PHP_CodeSniffer via Composer
+
+- Navigate to the root directory of your Drupal project and run the following command to install PHP_CodeSniffer:
+  ```bash
+  composer require --dev "squizlabs/php_codesniffer=*"
+
+### Step 2: Adding Drupal Coding Standards
+
+- To use Drupal's coding standards with PHP_CodeSniffer, we need to add the Coder module:
+  ```bash
+  composer require --dev drupal/coder
+
+- Next, register the Drupal coding standards with PHP_CodeSniffer:
+  ```bash
+  vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
+
+- Verify that the Drupal coding standards are installed:
+  ```bash
+  vendor/bin/phpcs -i
+
+### Step 3: Running PHP_CodeSniffer
+
+- To run PHP_CodeSniffer on your custom modules, use the following command:
+  ```bash
+  vendor/bin/phpcs --standard=Drupal docroot/modules/custom/
+
+- Handling Memory Limit Issues:
+  Edit the php.ini file to increase the memory_limit (or) Using the -d memory_limit=4096M option
+  ```bash
+  vendor/bin/phpcs -d memory_limit=4096M --standard=Drupal docroot/modules/custom/
+
+
+### Step 4: Fixing Code Sniffer Violations
+- PHP_CodeSniffer can automatically fix certain coding standard violations. To do this, run:
+  ```bash
+  vendor/bin/phpcbf -d memory_limit=4096M --standard=Drupal docroot/modules/custom/
+
+### Additional Resources
+
+- [PHP_CodeSniffer Documentation](https://github.com/squizlabs/PHP_CodeSniffer)
+- [Drupal Coding Standards](https://www.drupal.org/docs/develop/standards)
+- [Composer Documentation](https://getcomposer.org/doc/)
+
+
 
 ## Validate composer
 
