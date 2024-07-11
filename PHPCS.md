@@ -1,6 +1,6 @@
 # Installing and Running PHP_CodeSniffer in a Drupal Project for Custom Modules and upgrading PHP 8.2 to 8.3 version
 
-This guide will walk you through the steps to install PHP_CodeSniffer using Composer and run it in a Drupal project to check custom modules.
+This guide will walk you through the steps to install PHP_CodeSniffer using Composer and run it in a Drupal project to check custom modules and upgrading PHP versions
 
 ## Prerequisites
 
