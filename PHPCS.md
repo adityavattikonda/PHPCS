@@ -100,6 +100,7 @@ This guide will walk you through the steps to install PHP_CodeSniffer using Comp
 - [PHP_CodeSniffer Documentation](https://github.com/squizlabs/PHP_CodeSniffer)
 - [Drupal Coding Standards](https://www.drupal.org/docs/develop/standards)
 - [Composer Documentation](https://getcomposer.org/doc/)
+- [code sniffer command lineusage](https://www.drupal.org/docs/extending-drupal/contributed-modules/contributed-module-documentation/coder/php-codesniffer-command-line-usage)
 
 
 
